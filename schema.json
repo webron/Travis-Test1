@@ -5,7 +5,7 @@
   "revision": 22,
   "type": "object",
   "required": [
-    "swagger112",
+    "swagger1122s",
     "info",
     "paths"
   ],
