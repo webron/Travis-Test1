@@ -5,7 +5,7 @@
   "revision": 22,
   "type": "object",
   "required": [
-    "112e31231212",
+    "112e31231212sds",
     "info",
     "paths"
   ],
