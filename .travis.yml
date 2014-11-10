@@ -1,0 +1,24 @@
+# language: scala
+# scala:
+#   - 2.10.4
+# install:
+#   - wget http://stedolan.github.io/jq/download/linux64/jq
+#   - chmod +x ./jq
+#   - sudo mv jq /usr/bin
+before_script:
+  - git status
+  - git branch -a
+  - git remote show origin
+  - git config --list
+  - . ./updateSchemaVersion.sh
+script:
+  - true
+  - git branch
+  - git status
+after_success:
+  - git push
+  - . ./updateRemoteRepo.sh
+env:
+  global:
+    - secure: bKlX8eYSbGUewa6wse8oavqH0CBEiJbGCEOZsmjetwcCR55oFJ79gXVjlFVMGWZwi2FaT7tmgXUqrSCIYbvr6CaDbRXYyBbW8mqToHIyeI4ZnGjmiWcdqEhhiAeqKqnvaDfnhjVw2ZX96PTH9tkqBk8g1oDRutJFRmuM+prHGL0=
+    - SCHEMA: schema.json
